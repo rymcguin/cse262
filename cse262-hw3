@@ -1,0 +1,43 @@
+HINT: for hex only allowed to use caps, so make own alphabet. 
+Street Address
+
+123 Main St. \n
+Bethlehem, PA 18015
+
+parts:
+1. Street #
+2. Street name
+3. new line
+4. City
+5. Comma
+6. State
+7. Zip code
+
+Variables:
+Adress_line = street_num, ws, Streetname, "\n";
+Street_num = {digit};
+Street name = {alpha|ws|digit|"."|"-"};
+City= {alpha|ws};
+State= "PA"|"DE"|"NJ"|"NY"...
+zip = digit,digit,digit,digit,digit,["-",digit,digit,digit,digit];
+ws = " ";
+
+```
+US_Adress = 
+Address_line, City, ",", ws, State, ws, Zipcode;
+
+```
+
+
+
+Program = P_head, P_body, P_footer;
+
+P_head = "Start", ws, ID, new_line;
+P_body = {ws|assign};
+P_footer = "end";
+
+assign = ID, "=", num,",";
+ID = {alpha};
+num = {digit};
+
+
